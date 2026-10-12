@@ -1,0 +1,68 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tenant Management System"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tenant Name"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/tenantName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter tenant name"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone Number"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/tenantPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter phone number"
+            android:inputType="phone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Monthly Rent (KES)"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/tenantRent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter monthly rent"
+            android:inputType="numberDecimal" />
+
+        <Button
+            android:id="@+id/saveTenant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Tenant" />
+
+    </LinearLayout>
+</ScrollView>
