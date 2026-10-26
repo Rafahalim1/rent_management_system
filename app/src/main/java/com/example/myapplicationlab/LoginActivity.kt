@@ -1,5 +1,6 @@
 package com.example.myapplicationlab
 
+
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -15,7 +16,6 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Read the extra EMAIL data sent from RegisterActivity
         val registeredEmail = intent.getStringExtra("EMAIL")
         if (registeredEmail != null) {
             binding.emailEditText.setText(registeredEmail)
@@ -30,20 +30,19 @@ class LoginActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            // Explicit intent to MainActivity
             val intent = Intent(this, MainActivity::class.java)
+            // Added to send the user's email into MainActivity
+            intent.putExtra("EMAIL", email)
             startActivity(intent)
-            finish() // Closes the login screen so Back doesn't return to it
+            finish()
         }
 
         binding.registerTextView.setOnClickListener {
-            // Explicit intent to RegisterActivity
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
 
         binding.helpTextView.setOnClickListener {
-            // Implicit intent to open a web browser
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.strathmore.edu"))
             startActivity(intent)
         }
